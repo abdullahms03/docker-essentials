@@ -43,7 +43,7 @@ docker run --name <anyname> -d -p 8080:80 nginx:latest
 docker start <imagename>
 ```
 #### docker stop
-```
+``` 
 docker stop <imagename>
 ```
 #### docker remove
@@ -82,4 +82,22 @@ docker run --name <anyname> -v <sourcepath>:<destinationpath>:ro -p <websiteport
 #### Share between containers
 ```
 docker run --name <newcontainer> --volumes-from <existingcontainername> -p <websiteport>:<containerport> -d <imagename>:<tag>
+```
+
+### DOCKERFILE
+https://docs.docker.com/engine/reference/builder/
+
+Add `Dockerfile` in the root folder  
+Always build a docker image from a source image
+
+- `FROM` -> is to indicate the source image
+- `ADD` -> Add the content to destination folder
+
+Build a docker image from dockerfile
+```
+docker build --tag <name:tag> <source>
+
+e.g.
+
+docker build --tag website:latest .
 ```
