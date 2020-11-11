@@ -97,6 +97,10 @@ Build a docker image from dockerfile
 ```
 docker build --tag <name:tag> <source>
 
+OR
+
+docker build -t <name:tag> <source>
+
 e.g.
 
 docker build --tag website:latest .
